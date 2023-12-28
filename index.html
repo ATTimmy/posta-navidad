@@ -4,39 +4,38 @@
   <head>
     <title>Postal de Navidad</title>
     <style>
-      body {
+       body {
         background:
           linear-gradient(#0007, #0000),
           #123;
         margin: 0;
         height: 100vh;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; /* Centrar todo vertical y horizontalmente */
       }
 
       .gif-container {
-        width: 200px;
-        /* TamaÃ±o reducido del GIF */
-        margin: 20px auto;
-        /* Centrar el contenedor y reducir el margen superior */
+        width: 280px; /* Tamaño aumentado del GIF */
+        margin: 20px auto; /* Asegura que el GIF esté centrado horizontalmente */
         border-radius: 10px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center; /* Centrar el contenido del contenedor */
       }
 
       .gif-container iframe {
         width: 100%;
-        /* Ajustar el ancho del iframe al contenedor */
         height: auto;
-        /* Altura automÃ¡tica para mantener la proporciÃ³n */
         border: none;
       }
 
       .saludo {
         color: red;
-        font-size: 24px;
-        margin: 20px 0;
-        /* Espacio arriba y abajo del tÃ­tulo */
+        font-size: 36px; /* Tamaño de fuente aumentado */
+        margin-bottom: 20px; /* Espacio entre el texto y el GIF */
         text-align: center;
-        /* Centrar el texto */
       }
 
       @keyframes firework {
@@ -184,7 +183,7 @@
     <div class="saludo">Bon Nadal!</div>
     <div class="gif-container">
       <!-- AquÃ­ va el GIF -->
-      <iframe allow="fullscreen" frameBorder="0" height="320" src="https://giphy.com/embed/LzIg4hVdQADA7m2sfK/video" width="480"></iframe>
+      <iframe src="https://giphy.com/embed/l0DAI9oBgA7r9xwre" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p>
       <div class="firework"></div>
       <div class="firework"></div>
       <div class="firework"></div>
