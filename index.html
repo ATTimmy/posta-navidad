@@ -273,6 +273,7 @@
     </style>
   </head>
   <body>
+   
     <div class="firework"></div>
     <div class="firework"></div>
     <div class="firework"></div>
@@ -312,9 +313,40 @@
     <div>
       <img src="images/cara_2.png" class="cara5" style="animation-duration: 5s;" />
     </div>
-    <!-- <img src="images/cara_1.png" class="cara2" style="animation-duration: 6s;" />
-    <img src="images/cara_1.png" class="cara2" style="animation-duration: 7s;" />
-    <img src="images/cara_1.png" class="cara2" style="animation-duration: 8s;" /> -->
+    <audio id="myAudio" loop>
+      <source src="audio/Rick.mp3" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <button id="playButton" onclick="togglePlay()">Reproducir Música</button>
+
+    <script>
+      var myAudio = document.getElementById('myAudio');
+      var isPlaying = false;
+
+      function togglePlay() {
+        if (isPlaying) {
+          myAudio.pause();
+        } else {
+          myAudio.play();
+        }
+        isPlaying = !isPlaying;
+      }
+
+      myAudio.onplaying = function() {
+        isPlaying = true;
+      };
+      myAudio.onpause = function() {
+        isPlaying = false;
+      };
+setTimeout(() => {
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('playButton').click();
+  });
+}, 1000);
+      // Evento que simula la pulsación del botón al cargar la página
+    </script>
     <script>
       // JavaScript para controlar la animación
       var cara = document.getElementById('cara');
