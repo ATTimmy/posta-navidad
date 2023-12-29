@@ -174,6 +174,102 @@
         top: 60%;
         animation-delay: -0.4s;
       }
+      .cara {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: auto;
+            transform: translate(-50%, -50%) scale(0);
+            transition: transform 1s ease-in-out;
+            z-index: 10; /* Asegúrate de que está por encima de los demás elementos */
+        }
+
+        .cara.show {
+            width: 100vw; /* Tamaño completo de la vista */
+            height: 100vh;
+            transform: translate(-50%, -50%) scale(1); /* Escala normal */
+        }
+        .cara2 {
+            position: fixed; /* Se usa fixed para que la imagen se mantenga fija en la ventana */
+            top: 20%;
+            left: 20%;
+            width: 100px; /* 100% del ancho de la ventana */
+            height: 100px; /* 100% del alto de la ventana */
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: center; /* El origen de la transformación es el centro */
+            animation: spin infinite linear; /* Animación de giro */
+        }
+        .cara22 {
+            position: fixed; /* Se usa fixed para que la imagen se mantenga fija en la ventana */
+            top: 20%;
+            left: 80%;
+            width: 100px; /* 100% del ancho de la ventana */
+            height: 100px; /* 100% del alto de la ventana */
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: center; /* El origen de la transformación es el centro */
+            animation: spin infinite linear; /* Animación de giro */
+        }
+        .cara25 {
+            position: fixed; /* Se usa fixed para que la imagen se mantenga fija en la ventana */
+            top: 60%;
+            left: 20%;
+            width: 100px; /* 100% del ancho de la ventana */
+            height: 100px; /* 100% del alto de la ventana */
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: center; /* El origen de la transformación es el centro */
+            animation: spin infinite linear; /* Animación de giro */
+        }
+        .cara3 {
+            position: fixed; /* Se usa fixed para que la imagen se mantenga fija en la ventana */
+            top: 80%;
+            left: 80%;
+            width: 100px; /* 100% del ancho de la ventana */
+            height: 100px; /* 100% del alto de la ventana */
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: center; /* El origen de la transformación es el centro */
+            animation: spin infinite linear; /* Animación de giro */
+        }
+        .cara35 {
+            position: fixed; /* Se usa fixed para que la imagen se mantenga fija en la ventana */
+            top: 90%;
+            left: 30%;
+            width: 100px; /* 100% del ancho de la ventana */
+            height: 100px; /* 100% del alto de la ventana */
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: center; /* El origen de la transformación es el centro */
+            animation: spin infinite linear; /* Animación de giro */
+        }
+        .cara4 {
+            position: fixed; /* Se usa fixed para que la imagen se mantenga fija en la ventana */
+            top: 40%;
+            left: 40%;
+            width: 100px; /* 100% del ancho de la ventana */
+            height: 100px; /* 100% del alto de la ventana */
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: center; /* El origen de la transformación es el centro */
+            animation: spin infinite linear; /* Animación de giro */
+        }
+        .cara5 {
+            position: fixed; /* Se usa fixed para que la imagen se mantenga fija en la ventana */
+            top: 60%;
+            left: 60%;
+            width: 100px; /* 100% del ancho de la ventana */
+            height: 100px; /* 100% del alto de la ventana */
+            transform: translate(-50%, -50%) rotate(0deg);
+            transform-origin: center; /* El origen de la transformación es el centro */
+            animation: spin infinite linear; /* Animación de giro */
+        }
+
+        /* Clave de animación para girar la imagen */
+        @keyframes spin {
+            from {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            to {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
     </style>
   </head>
   <body>
@@ -192,5 +288,39 @@
     <div class="firework"></div>
     <div class="firework"></div>
     <div class="firework"></div>
+    <img src="images/cara_1.png" class="cara" id="cara"/>
+
+
+    <div>
+      <img src="images/cara_1.png" class="cara2" style="animation-duration: 5s;" />
+    </div>
+    <div>
+      <img src="images/cara_1.png" class="cara22" style="animation-duration: 5s;" />
+    </div>
+    <div>
+      <img src="images/cara_1.png" class="cara25" style="animation-duration: 5s;" />
+    </div>
+    <div>
+      <img src="images/cara_1.png" class="cara3" style="animation-duration: 5s;" />
+    </div>
+    <div>
+      <img src="images/cara_1.png" class="cara35" style="animation-duration: 5s;" />
+    </div>
+    <div>
+      <img src="images/cara_1.png" class="cara4" style="animation-duration: 5s;" />
+    </div>
+    <div>
+      <img src="images/cara_1.png" class="cara5" style="animation-duration: 5s;" />
+    </div>
+    <!-- <img src="images/cara_1.png" class="cara2" style="animation-duration: 6s;" />
+    <img src="images/cara_1.png" class="cara2" style="animation-duration: 7s;" />
+    <img src="images/cara_1.png" class="cara2" style="animation-duration: 8s;" /> -->
+    <script>
+      // JavaScript para controlar la animación
+      var cara = document.getElementById('cara');
+      setInterval(function() {
+          cara.classList.toggle('show');
+      }, 1000); // Cambia cada 2 segundos para dar tiempo a la animación
+  </script>
   </body>
 </html>
